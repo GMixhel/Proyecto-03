@@ -1,0 +1,49 @@
+@use 'variables' as v;
+
+@mixin movil {
+    @media (max-width: v.$movil){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: v.$tablet){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: v.$desktop){
+        @content;
+    }
+}
+
+@mixin grid($columnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+}
+
+@mixin reset-lista{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+@mixin button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background: v.$gradient;
+        color: #fff;
+        width: 18rem;
+        height: 6rem;
+        border-radius: 0.5rem;
+        font-weight: 900;
+        font-size: 1.5em;
+        cursor: pointer;
+        text-align: center;
+        transition: .2s ease all;
+        position: relative;
+        overflow: hidden;
+}

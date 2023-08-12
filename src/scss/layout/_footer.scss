@@ -1,0 +1,159 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+//--------------------FOOTER
+.footer{
+    background:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/Footer__img.webp');
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+.footer__info{
+    @include m.grid(3, 8rem);
+    margin-bottom: 1rem;
+
+    .footer__title {
+        text-align: center;
+        color: v.$secundario;
+        font-size: 2em;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding-top: 3rem;
+        margin-bottom: 2rem;
+        }
+    
+    img{
+        width: 3rem;
+    }
+
+     p {
+        font-size: 1em;    
+     }  
+    
+}
+
+.footer__about{   
+
+    .footer__description{
+        font-size: 1em;
+        padding-bottom: 2rem;
+        font-size: 1em;
+    }
+
+    .footer__socialmedia{
+        display: flex;      
+      
+    }
+
+    .footer__icon {
+              padding:2rem 3rem 2rem 0;
+              width: 7rem;
+              height: 7rem;
+              width: 100%;
+              transition: 0.2s all ease-in-out;
+              transform: translateY(0);
+          }
+}
+
+.contact__description{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+     
+    div{
+        padding-right: 1rem;
+    }
+
+     img {
+               width: 2rem;
+           }
+}
+
+.footer__opening{
+    text-transform: uppercase;
+    span{
+        color: v.$grey;
+    }
+}
+
+.footer__logo{
+    width: 10rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.footer__copyrigth{
+    text-align: center;
+    padding-bottom: 5rem;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+  .footer__icon:hover{
+    transform: translateY(-10px);
+    
+  }
+
+  .hidden {
+      opacity: 0;
+      filter: blur(5px);
+      transform: translateY(+30%);
+      transition: all 0.7s ease;
+  }
+
+  .show__animation {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+  }
+  
+//-----------------------------MEDIAS QUERIES
+
+//---TABLET---//
+
+@include m.tablet {
+  .footer__container{
+    p{
+        font-size: 1em;
+    }
+    .footer__description {
+              font-size: 1.1em;
+     }
+  }  
+  
+    .footer__info{
+    gap: 1.5rem ;
+    padding: 0 3rem;
+  }
+
+ 
+  .footer__socialmedia {
+      align-items: center;
+      justify-content: space-evenly;
+
+  }
+}
+
+//---MOVIL---//
+
+@include m.movil {
+
+    .footer__info{
+        grid-template-columns: 1fr;
+    }
+
+    .footer__opening{
+        display: none;
+    }
+
+    .footer__copyrigth{
+        font-size: 1.1em;
+    }
+
+  .footer__socialmedia .footer__icon{
+        padding: 2rem;
+    }
+}

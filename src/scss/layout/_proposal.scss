@@ -1,0 +1,143 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+
+//----------------------PROPOSAL
+.proposal{
+    @include m.grid(3, 0);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .proposal__box{
+       background: v.$gradient;
+        color: #fff;
+        padding: 5rem;
+
+        .proposal__title{
+            font-size: 1.5em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .proposal__descriptions{
+            text-align: left;
+            font-size: 1.1em;
+            margin-bottom: 3rem;
+        }
+
+        .proposal__more{
+            text-transform: uppercase;
+            border: 1px solid #fff;
+            padding: 1rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: all ease-in-out 0.2s;
+        }
+    }
+    
+}
+
+.proposal__more:hover{
+    background: #fff;
+    color: v.$principal;
+}
+
+.proposal .proposal__box--color{
+    background: v.$black;
+}
+
+.proposal .proposal__box--red{
+    background:v.$principal;
+}
+
+
+.overlay__modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 0.6);
+    opacity: 1; 
+    padding-top: 8rem;
+    position: fixed;          
+    
+}
+
+
+    .proposal__modal{
+        max-width: 60rem;       
+        display: flex;        
+        flex-direction: column;   
+        justify-content: center;
+        align-items: center;
+        background: v.$principal;
+        margin-bottom: 3rem;
+        
+       
+
+        .modale1__img{
+            margin: 0;
+            max-width: 60rem;
+            height: 30rem;           
+            
+            
+        }
+
+        .modal__title{
+            padding:1rem ;
+            margin: 2rem 0;
+            color: v.$secundario;
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+
+        .modalp{
+            padding: 0 2rem 2rem 2rem;            
+            font-size: 2rem;
+            font-family: v.$font-principal;
+        }      
+        
+        
+    }
+
+          .btn__cerrar {             
+              display: flex;
+              width: 5rem;
+              height: 5rem;
+              cursor: pointer;
+    
+          }
+
+
+
+
+//------------------------MEDIAS QUERIES
+
+//---TABLET---//
+@include m.tablet {
+   .proposal .proposal__box{
+        padding: 3rem 2rem;
+        .proposal__title{
+            font-size: 1.2em;
+        }
+        .proposal__descriptions{
+            font-size: 1em;
+        }
+    }
+}
+
+//---MOVIL---//
+@include m.movil{
+   .proposal{ 
+    grid-template-columns: 1fr;
+}
+}

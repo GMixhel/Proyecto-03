@@ -1,0 +1,128 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+//--------------------ADDITIONALLY
+.add{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/additionally__Background.webp');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .add__container {
+            text-align: center;
+            color: #fff;           
+    
+            .add__title {
+                color: v.$principal;
+                text-transform: uppercase;
+                font-weight: 600;
+                margin-top: 5rem;
+                padding-top: 10rem;                
+            }
+        }
+   }
+
+
+ .add__items{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10rem;     
+
+    .add__item{
+             
+       div{
+        width: 10rem;
+       }
+    }
+      .add__pro{
+        text-align: center;
+        font-size: 1em;
+        margin-top: 3rem;
+        font-weight: 600;
+        
+    }
+}
+
+//----------------------------MEDIA QUERIES
+
+//---TABLET---//
+@include m.tablet {
+
+    .add {
+        height: 100%;
+    }
+
+    .add__container {
+        padding: 0 2rem;
+
+        .add__items:last-of-type {
+                grid-column: 1 / 2;
+            }
+
+        .add__descriptions {
+            text-align: center;
+         }
+
+
+    }
+
+    .add__items {
+       @include m.grid(2, 2rem);
+       justify-items: center;
+
+        .add__item div img {
+            width: 8rem;
+            margin: 0 auto;
+        }
+
+    }
+
+    .add__item {
+        margin-bottom: 1rem;
+    }
+
+    .add__container  .add__item:last-of-type {
+         grid-column: 1 / -1;
+     }
+
+}
+
+
+//---MOVIL---//
+@include m.movil {
+
+    .add{
+        height: 100%;
+    }
+    .add__container{
+        padding: 0 3.5rem;
+
+        .add__descriptions{
+            text-align: left;
+            text-align: justify;
+        }   
+        
+     
+    }
+
+   .add__items{
+        display: flex;
+        flex-direction: column;
+    
+        .add__item div img {
+                width: 8rem;
+                margin: 0 auto;
+            }
+     
+   }
+
+          .add__item {
+              margin-bottom: 1rem;
+          }
+
+      
+}

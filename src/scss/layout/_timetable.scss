@@ -1,0 +1,145 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+//--------------------TIMETABLE
+.timetable{
+    display: flex;  
+    justify-content: center;
+    text-align: center; 
+    
+    .timetable__title {            
+            color: v.$principal;
+            font-weight: 600;
+            padding-top: 10rem;
+            text-transform: uppercase;
+        }
+    .timetable__descriptions{
+        margin-bottom: 5rem;
+        color: v.$black;
+    }
+}
+
+.timetable__days__container{    
+   @include m.grid(4, 1rem);
+   justify-items: center;
+   align-items: center;  
+
+
+        .timetable__days{
+            width: 30rem;
+            height: 30rem;
+            border-radius: 0.5rem;
+            background: v.$black;
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+
+            img{
+                max-width: 100%;
+                height: 100%;
+                display: block;
+                transform: scale(1.3);
+                transition: all 0.3s ease-out;
+            }
+        } 
+        
+        .timetable__schedule{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    padding-bottom: 5rem;      
+            
+            .timetable__day {
+                    text-transform: uppercase;
+                    color: v.$secundario;
+                    font-weight: 600;
+                    margin-bottom: 1.5rem;
+                    font-size: 2em;
+                    transform: translateY(70px);
+                    transition: all 0.3s ease-in-out;
+                }
+            .timetable__trianing{
+                    transform: translateY(60px);
+                    opacity: 0;
+                    transition: all 0.3s ease-in-out;
+                }
+
+            .timetable__trianing li{
+                    font-size: 1.3em;
+                    padding-bottom: 1rem;
+            }
+          
+        }   
+        .motivation{
+         display: flex;
+         justify-content: center;
+         align-items: center;            
+
+        }
+ }
+
+.timetable__days:hover img{
+    transform: scale(1.1) translateY(-20px);
+    opacity: 0.3;
+}
+
+.timetable__days:hover .timetable__day{
+    transform: translateY(0)
+}
+.timetable__days:hover .timetable__trianing{
+    opacity: 1;
+    transform: translateY(0)
+}
+
+  .motivation h3 {
+    color: v.$principal;
+      text-align: center;
+      font-size: 5rem;
+      font-weight: 700;
+      margin: 0 auto;
+
+  }
+      
+
+ //-------------------------------MEDIAS QUERIES
+
+ //--TABLET--//
+@include m.tablet { 
+      .timetable{
+        display: none
+      }
+    
+    .timetable__days__container{
+        @include m.grid(2, 2rem);    
+        padding: 3rem 5rem;
+       
+       }  
+   
+}
+
+ //--MOVIL--//
+@include m.movil {
+
+  
+    .timetable__container {
+            padding: 0 3rem;
+        }
+    .timetable__descriptions{
+        text-align: left;
+        text-align: justify;
+    }
+
+    .timetable__days__container{
+       grid-template-columns: 1fr;
+       padding: 0;
+       padding-bottom: 3rem;
+
+        .motivation {
+                display: none;
+            }        
+    }
+ 
+}
+
+

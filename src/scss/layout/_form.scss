@@ -1,0 +1,213 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+//--------------------FORM
+.contact{
+    background-image: url(../img/form__map.webp);
+    background-size: cover;
+    
+    .form__container{
+        padding: 3rem 0;
+        margin: 0 auto;
+    }
+
+         input, textarea {
+             padding: 1rem;
+         }
+
+}
+
+.form {
+    text-align: left;
+    width: 50rem;
+    background: v.$black;
+    padding: 2rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    margin-left: auto;
+
+    .form__title{
+        font-size: 2em;
+        color: v.$principal;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;   
+        padding-top: 3.7rem; 
+        margin-bottom: 2rem;
+
+    }
+        .form__btn {
+          background: v.$principal;
+          font-size: 1.5em;
+          text-transform: uppercase;
+          font-weight: 600;
+          padding: 1rem 2rem;
+          transition: .3s ease-in-out all;   
+          border-radius: 0.5rem;    
+          opacity: 0.5;  
+          pointer-events: none;  
+          transition: 0.3s all ease;  
+          cursor: pointer;  
+        
+           
+       }
+
+           .form__btn--active{
+         opacity: 1;  
+          pointer-events: inherit;  
+           }
+       
+
+    .field {
+            margin-bottom: 2rem;
+            
+            .field__form {
+                border: 1px solid v.$secundario;
+                width: 100%;
+                background: v.$black;            
+                }
+        }
+}
+
+  .form__btn:hover {
+     background: v.$principalDark;    
+ }
+
+
+.loading__animation{  
+   display: flex;   
+   justify-content: center;
+   align-items: center;
+   opacity: 0;  
+   pointer-events: none;
+   transition: 0.3s all ease-in-out;
+ }
+
+.loading__animation--active{
+    opacity: 1;
+    pointer-events: inherit;
+}
+
+.form__success{
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+ color: v.$secundario;
+ transition: 0.4s all ease-in-out;
+}
+
+.form__success--active{
+  opacity: 1;
+  transform: translateY(0);
+  font-size: 1.5rem;
+}
+
+.form__alert{
+    font-size: 0.8em;
+    color: v.$secundario;
+    text-transform: uppercase;
+    padding-top: 0.3rem;
+    letter-spacing: 0.3rem;
+   
+}
+
+ .sk-cube-grid {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: v.$secundario;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+
+
+
+
+//------------------------------------MEDIAS QUERIES
+
+//---TABLET---//
+@include m.tablet {
+    .contact{
+        background: v.$black;
+
+       
+    }
+
+    .form__container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+       .form{        
+        width: 100%;
+        padding: 0 3rem;
+       }
+    }
+
+      .field .form__button {
+      margin: 0 auto;
+      padding: 1rem  5rem;
+      }
+
+}
+
+
+
+

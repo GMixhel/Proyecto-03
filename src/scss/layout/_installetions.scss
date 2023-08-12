@@ -1,0 +1,134 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+//--------------------INSTALLETIONS
+.installetions{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+padding-top: 10rem; 
+width: 100%;
+overflow: hidden;
+   
+    .installations__descriptions{
+        width: 100%;
+        min-width: 50rem;
+       
+        .installations__title {
+                text-transform: uppercase;
+                color: v.$principal;
+                font-size: 3.5rem;
+                font-weight: 600;
+                padding-top: 0;   
+                margin-bottom: 2rem;        
+            }
+    }
+   
+}
+
+.installations__container{
+    display: grid;
+    grid-template-columns: 5rem 1fr 5rem;
+    align-items: center;
+    justify-items: center;       
+   
+    
+
+    .btn__before{
+        margin-left: 20rem;
+        cursor: pointer;      
+        z-index: 1;  
+        fill: v.$secundario; 
+             
+    }
+   
+    .btn__next {
+        margin-right: 20rem;
+        cursor: pointer;
+        z-index: 1;
+               
+    }
+
+       
+}
+
+ .installations__img {
+     width: 100%;
+     height: 100%;
+     border-radius: 0.5rem;
+     display: flex;
+     justify-items: center;
+     align-items: center;
+     grid-column: 2/3;
+     grid-row: 1/2;
+     overflow: hidden;
+     opacity: 0;
+     pointer-events: none;
+     
+ }
+
+ .installations__improvement{
+    list-style-type:square;
+    margin-bottom: 1rem;
+    color: v.$black;
+    font-size: 2.5rem;
+ }
+
+ .installations__img--show {
+     pointer-events: unset;
+     opacity: 1;
+     transition: opacity 0.5s ease-in-out;
+ } 
+
+ .img__slide{
+    width: 100%;
+ }
+
+
+
+
+//---------------------MEDIAS QUIERIES
+
+//---TABLET---//
+@include m.tablet {
+    .installetions{
+        flex-direction: column;
+        justify-content: center;
+     
+    }
+    .installations__descriptions{
+        margin-bottom: 3rem;
+    }
+
+          .installations__descriptions {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              padding: 0 7.5rem;
+          }
+}
+
+//---MOVIL---//
+
+@include m.movil{
+
+    .installations__title{
+        margin: 0 5rem;        
+    }
+    .installations__improvements{
+        width:70%;
+        margin-top: 3rem;
+    }
+     
+    .installations__img{
+        height: 30rem;
+        width:  40rem ;
+    }
+    .btn__before,
+    .btn__next{
+        padding: 1rem;    
+       
+    }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <g id="pills">
+    <circle cx="47.00012" cy="46.99988" r="10.99988" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 4px"/>
+    <path d="M16,46A10,10,0,0,1,8.92871,28.92871l20-20A10.00031,10.00031,0,0,1,43.07129,23.07129l-20,20A9.97123,9.97123,0,0,1,16,46Z" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 4px"/>
+    <line x1="33.07" y1="33.07" x2="18.93" y2="18.93" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 4px"/>
+    <line x1="54.77704" y1="39.22296" x2="39.22321" y2="54.77679" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 4px"/>
+  </g>
+</svg>

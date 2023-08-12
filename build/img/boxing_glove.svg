@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <g id="boxing_glove">
+    <polyline points="44 43.168 44 60 20 60 20 43.798" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+    <path d="M14,22.70846V16A12,12,0,0,1,26,4H38A12,12,0,0,1,50,16V34A10,10,0,0,1,40,44H22" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+    <path d="M22,32h2a6,6,0,0,0,6-6v0a6,6,0,0,0-6-6H20a8,8,0,0,0-8,8v6A10,10,0,0,0,22,44h2" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+    <path d="M30,26H40A10,10,0,0,0,50,16v0" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+    <line x1="44" y1="52" x2="20" y2="52" style="fill: none;stroke: #fff;stroke-linejoin: round;stroke-width: 4px"/>
+  </g>
+</svg>

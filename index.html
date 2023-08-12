@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>FitnessGym</title>
+    <link rel="stylesheet" href="build/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <meta name="author" content="George M. Rodriguez">
+    <meta name="descriptions"
+        content="Join us and start your journey to a healthier, more active life today! We offer a wide variety of classes and state-of-the-art equipment to help you reach your fitness goals.">
+    <script defer src="./build/js/app.js"></script>
+   
+</head>
+<body>
+    <header id="header" class="header">
+        <section class="header__nav hidden">
+            <div class="nav__container  container">
+                <div class="nav__logo">
+                    <a href="#">
+                        FIT<span class="nav__logo--color">SS</span>
+                    </a>
+                </div>
+
+                <button class="nav__open">
+                <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" alt="open">
+                    <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>   
+                </svg>
+                </button>
+               <nav class="nav">
+                    <ul class="nav__links">
+                        <li class="nav__items">
+                            <a class="nav__link" href="#header">Home</a>
+                        </li>
+                        <li class="nav__items">
+                            <a class="nav__link" href="#offers">Pricing</a>
+                        </li>
+                        <li class="nav__items">
+                            <a class="nav__link" href="#add">Additionality</a>
+                        </li>
+                        <li class="nav__items">
+                            <a class="nav__link" href="#timetable">Timetable</a>
+                        </li>
+                        <li class="nav__items">
+                            <a class="nav__link" href="#staff">staff</a>
+                        </li>
+                        <li class="nav__items">
+                            <a class="nav__link" href="#contact">Contacts</a>
+                        </li>           
+                    </ul>                      
+               </nav>
+
+               <ul class="nav__menushop  menushop--hidden">
+                <li class="submenu">
+                    <button class="nav__shop">
+                        <svg class="nav__svg" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path
+                                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z">
+                            </path>
+                            <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                            <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                        </svg>
+                    </button>
+
+                    <div id="submenu__carshop" class="submenu__shop" >
+                        <table id="submenu__items" class="carshop__list">
+                            <thead class="head__carshop">
+                                <tr>
+                                    <th>Month</th>
+                                    <th>Price</th>
+                                    <th>Qty</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        
+                        <div class="submenu__actions">
+                        <button href="#" id="submenu__reset" class="submenu__reset">Reset</button>
+
+                        <button href="#" id="submenu__buy" class="submenu__buy">Buy</button>
+                        </div>
+                    </div>
+                </li>
+               </ul>
+               
+        </section>
+        
+        <section class="hero__container container hidden">
+            <div class="hero__proposal">
+                <h1 class="hero__title">
+                    Let´s Start a New <span class="gradient">life</span> Today
+                </h1>
+                <p class="hero__description">Strength comes not from what you can do, but from overcoming what you thought you could not.  
+                </p>
+                <button class="hero__btn button"><span>Get Started</span></button>
+            </div>
+        </section>
+
+    </header>
+    
+    <section id="info" class="info">
+        <div class="info__container container">
+            <div class="info__box">
+                <p class="info__desc">keep your bady</p>
+                <h2 class="info__title">fit & strong</h2>
+                <p>Success in fitness is not a stroke of luck, it is hard work, perseverance, learning, sacrifice and, above all, love for what you do.</p>
+            </div>
+            <div class="info__schedule">
+                <h2>OPENING<br>Hours</h2>
+                <p>from Monday to friday</p>
+                <span>8AM - 8PM</span>
+                <p>Saturday and Sunday</p>
+                <span>7AM - 9PM</span>
+            </div>
+            <div class="info__box info__box--right ">
+                <p class="info__desc">Just teste</p>
+                <h2 class="info__title">Free Lesson</h2>
+                <p>Don't exercise because you hate your body, exercise because you love your body. Exercise is not a chore, it's a gift. </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="offers" class="offers container">
+    <h2  class="offers__title">our offers</h2>
+    <div class="offers__container hidden">        
+         <div class="offers__card">
+            <h3>39€</h3>
+            <button data-id="1" class="offers__ctn button" href="#"><span>buy</span></button>
+            <div class="offers__plan">
+                <p>8 x gym</p>
+                <p>4 x crossfit</p>
+                <p>1 x fitness</p>
+            </div>
+            <div class="offers__months">
+                <h4 class="offers__month">month</h4>
+                <div class="pulse__animation">1 
+                    <span class="month__number"></span>
+                    <span class="month__number"></span>
+                </div>
+            </div>
+         </div>
+         <div class="offers__card">
+            <h3 class="offers__promotion">99€</h3>
+            <button data-id="2" class="offers__ctn button" href="#">
+                <span>buy</span>
+            </button>
+            <div class="offers__plan">
+                <p>48 x gym</p>
+                <p>24 x crossfit</p>
+                <p>6 x fitness</p>
+            </div>
+            <div class="offers__months">
+                <h4 class="offers__month">month</h4>
+                <div class="pulse__animation">6
+                    <span class="month__number"></span>
+                    <span class="month__number"></span>
+                </div>
+            </div>
+         </div>
+         <div class="offers__card">
+            <h3>189€</h3>
+            <button data-id="3" class="offers__ctn button" href="#"><span>buy</span></button>
+            <div class="offers__plan">
+                <p>unlimmited gym</p>
+                <p>unlimmited crossfit</p>
+                <p>unlimmited fitness</p>
+            </div>
+            <div class="offers__months">
+                <h4 class="offers__month">month</h4>
+                <div class="pulse__animation">12
+                    <span class="month__number"></span>
+                    <span class="month__number"></span>
+                </div>
+            </div>
+         </div>
+    </div>
+    </section>
+
+    <section id="add" class="add">
+        <div class="add__container container hidden">
+            <h2 class="add__title">add</h2>
+            <p class="add__descriptions">Some of the extra areas that our gym offers, I hope they will help you reach your goals.</p>
+            <div class="add__items">
+                <div class="add__item">
+                   <div> <img src="./build/img/apple.svg" alt="apple"></div>
+                    <p class="add__pro">Dietician</p>
+                </div>
+            
+                <div class="add__item">
+                   <div> <img src="./build/img/pills.svg" alt="pills"></div>
+                    <p class="add__pro">Traumatologist</p>
+                </div>
+            
+                <div class="add__item">
+                    <div><img src="./build/img/bag.svg" alt="bag"></div>
+                    <p class="add__pro">Sports Store</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timetable" class="timetable container">
+        <div class="timetable__container">
+            <h2 class="timetable__title">Timetable</h2>
+            <p class="timetable__descriptions">The body you have is the only home you will ever have. Invest in it, and it will be your home forever</p>
+            <div class="timetable__days__container">
+                <div class="timetable__days monday">
+                    <img loading="lazy" src="./build/img/Grupo 47.webp" alt="Trainer">
+                    <div class="timetable__schedule">
+                        <h3 class="timetable__day">monday</h3>
+                        <ul class="timetable__trianing">
+                            <li>Training 01</li>
+                            <li>Training 02</li>
+                            <li>Training 03</li>
+                            <li>Training 04</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timetable__days monday">
+                    <img loading="lazy" src="./build/img/Grupo 48.webp" alt="Trainer">
+                    <div class="timetable__schedule">
+                        <h3 class="timetable__day">tuesday</h3>
+                        <ul class="timetable__trianing">
+                            <li>Training 01</li>
+                            <li>Training 02</li>
+                            <li>Training 03</li>
+                            <li>Training 04</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timetable__days monday">
+                    <img loading="lazy" src="./build/img/Grupo 50.webp" alt="Trainer">
+                    <div class="timetable__schedule">
+                        <h3 class="timetable__day">wednesday</h3>
+                        <ul class="timetable__trianing">
+                            <li>Training 01</li>
+                            <li>Training 02</li>
+                            <li>Training 03</li>
+                            <li>Training 04</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timetable__days monday">
+                    <img loading="lazy" src="./build/img/Grupo 49.webp" alt="Trainer">
+                    <div class="timetable__schedule">
+                        <h3 class="timetable__day">thursday</h3>
+                        <ul class="timetable__trianing">
+                            <li>Training 01</li>
+                            <li>Training 02</li>
+                            <li>Training 03</li>
+                            <li>Training 04</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timetable__days monday">
+                    <img loading="lazy" src="./build/img/Grupo 51.webp" alt="Trainer">
+                    <div class="timetable__schedule">
+                        <h3 class="timetable__day">friday</h3>
+                        <ul class="timetable__trianing">
+                            <li>Training 01</li>
+                            <li>Training 02</li>
+                            <li>Training 03</li>
+                            <li>Training 04</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timetable__days monday">
+                    <img loading="lazy" src="./build/img/Grupo 52.webp" alt="Trainer">
+                    <div class="timetable__schedule">
+                        <h3 class="timetable__day">saturday</h3>
+                        <ul class="timetable__trianing">
+                            <li>Training 01</li>
+                            <li>Training 02</li>
+                            <li>Training 03</li>
+                            <li>Training 04</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timetable__days monday">
+                    <img loading="lazy" src="./build/img/Grupo 53.webp" alt="Trainer">
+                    <div class="timetable__schedule">
+                        <h3 class="timetable__day">sunday</h3>
+                        <ul class="timetable__trianing">
+                            <li>Training 01</li>
+                            <li>Training 02</li>
+                            <li>Training 03</li>
+                            <li>Training 04</li>
+                        </ul>
+                    </div>
+                </div>
+              
+                <div class="timetable__days motivation">
+                    <h3>let's do it</h3>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="gym" class="installetions container">
+        <div class="installations__descriptions">
+                <h2 class="installations__title">Modern Equipment</h2>
+                <ul class="installations__improvements">
+                    <li class="installations__improvement">Spaces of more than 1,500 m2</li>
+                    <li class="installations__improvement">Rooms dedicated to a wide range of directed activities.</li>
+                    <li class="installations__improvement">More than 30 different types of machines.</li>
+                    <li class="installations__improvement">Free weight areas with dumbbells, barbells, benches and much more.</li>
+                    <li class="installations__improvement">Areas focused on functional training.</li>
+                </ul>
+        </div>
+
+        <div class="installations__container hidden">
+                <img src="./build/img/icon__before.svg" class="btn__before" id="before" alt="before">
+                
+                <div class="installations__img  installations__img--show" data-id="1">    
+                    <img width="500" height="300" class="img__slide" loading="lazy" src="./build/img/Eequipment-1.webp"  alt="Eequipment-1">                
+                </div>
+
+                <div class="installations__img sub_2" data-id="2">
+                    <img width="500" height="300" class="img__slide" loading="lazy" src="./build/img/Eequipment-2.webp" alt="Eequipment-2">
+                </div>
+
+                <div class="installations__img sub_3" data-id="3">
+                    <img width="500" height="300" class="img__slide" loading="lazy" src="./build/img/Eequipment-3.webp"  alt="Eequipment-3">   
+                </div>            
+
+                <img src="./build/img/icon__next.svg" class="btn__next" id="next" alt="next">
+        </div>
+    </section>
+
+    <section id="staff" class="staff container">
+        <h2 class="staff__title">ours staff</h2>
+        <p class="staff__descriptions">Our trainers have a passion for fitness and wellness, being great motivators and always being
+        up-to-date in their expertise.</p>
+
+        <div class="staff__trainers hidden">
+            <div class="Staff__trainer">
+                <img loading="lazy" src="./build/img/Trainer-1.webp" class="img__trainer" alt="personal__trainer">
+                <p class="staff__name">Mónica Jones</p>
+            </div>
+            <div class="Staff__trainer">
+                <img loading="lazy" src="./build/img/Trainer-2.webp" class="img__trainer" alt="personal__trainer">
+                <p class="staff__name">Celia Benitez Athur</p>
+            </div>
+            <div class="Staff__trainer">
+                <img loading="lazy" src="./build/img/Trainer-3.webp" class="img__trainer" alt="personal__trainer">
+                <p class="staff__name">Sophia A. Rvild Nat</p>
+            </div>
+            <div class="Staff__trainer">
+                <img loading="lazy" src="./build/img/Trainer-4.webp" class="img__trainer" alt="personal__trainer">
+                <p class="staff__name">Erika Seif Guys</p>
+            </div>
+        </div>      
+
+    </section>
+
+   <section id="proposal" class="proposal hidden">
+    <div class="proposal__box">
+        <h3 class="proposal__title">free consultation</h3>
+        <p class="proposal__descriptions">is simply dummy text of the printing and typesetting industry of the printing and typesetting industry. I</p>
+      <span data-id="modal1" class="proposal__more">more</span>
+    </div>
+
+    <div class="proposal__box proposal__box--color">
+        <h3 class="proposal__title">20% sale</h3>
+        <p class="proposal__descriptions">is simply dummy text of the printing and typesetting industry of the printing and typesetting industry. I</p>
+      <span data-id="modal2" class="proposal__more">more</span>
+    </div>
+
+    <div class="proposal__box proposal__box--red">
+        <h3 class="proposal__title">free training</h3>
+        <p class="proposal__descriptions">is simply dummy text of the printing and typesetting industry of the printing and typesetting industry. I</p>
+      <span data-id="modal3" class="proposal__more">more</span>
+    </div>
+   </section>
+
+   <section id="contact" class="contact">
+        <div class="form__container container">            
+            <form id="form" class="form hidden">
+                <h2 class="form__title">Contact</h2>
+                <div class="field">
+                    <input id="name" class="field__form " type="text" placeholder="Name">
+                </div>
+
+                <div class="field">
+                    <input id="email" class="field__form" type="email" placeholder="E-mail">
+                </div>
+
+                <div class="field">
+                    <textarea  placeholder="Message" class="field__form field__form--area " name="" id="message" cols="30"
+                        rows="10"></textarea>
+                </div>
+
+                <div  class="btn__form ">
+                    <input type="submit"  value="Submit" class="form__btn button" disabled>
+                </div>
+
+                <div id="form__loading" class="loading__animation">
+                    <div class="sk-cube-grid">
+                        <div class="sk-cube sk-cube1"></div>
+                        <div class="sk-cube sk-cube2"></div>
+                        <div class="sk-cube sk-cube3"></div>
+                        <div class="sk-cube sk-cube4"></div>
+                        <div class="sk-cube sk-cube5"></div>
+                        <div class="sk-cube sk-cube6"></div>
+                        <div class="sk-cube sk-cube7"></div>
+                        <div class="sk-cube sk-cube8"></div>
+                        <div class="sk-cube sk-cube9"></div>
+                    </div>                   
+                </div>
+                <p class="form__success">message sent successfully</p>
+               
+            </form>
+           
+        </div>
+    </section>
+
+
+<footer id="footer" class="footer">
+    <div class="footer__container container">
+        <div class="footer__info">
+            <div class="footer__about">
+                <h2 class="footer__title">About us</h2>
+                <p class="footer__description">Our main objectives are: To inspire people to live a healthy and active
+                    life, offering a welcoming, accessible and safe environment for physical exercise. To provide
+                    quality service in the area of fitness, promoting a healthy lifestyle and
+                    the continuous improvement of our clients' health.</p>
+                <div class="footer__socialmedia">
+                    <a href="#"><img class="footer__icon" src="./build/img/Facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img class="footer__icon" src="./build/img/Instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img class="footer__icon" src="./build/img/Twitter.svg" alt="Twitter"></a>
+                </div>
+            </div>
+
+
+            <div class="footer__contact">
+                <h2 class="footer__title">Contacts</h2>
+                <div class="contact__description">
+                    <div><img src="./build/img/Location.svg" alt="addres"></div>
+                    <p class="addres">Pgt Ajumtemen 9A 1-4 BCN
+                    </p>
+                </div>
+                <div class="contact__description">
+                    <div><img src="./build/img/Whatsapps.svg" alt="phone"></div>
+                    <div class="phone">
+                        <p class="number">+34665-82525-5569</p>
+                        <p class="number">+34665-82525-5569</p>
+                    </div>
+                </div>
+                <div class="contact__description">
+                    <div><img src="./build/img/Mail.svg" alt="email"></div>
+                    <p class="E-mail">FitnessGym@g>mail.com</p>
+                </div>
+            </div>
+            <div class="footer__opening">
+                <h2 class="footer__title">opening hour</h2>
+                <p>from Monday to Friday <span> 8AM - 8PM</span></p>
+                <p>Saturday and Sunday <span> 7AM - 9PM</span></p>
+            </div>
+        </div>
+
+        <div class="footer__logo">
+            <a href="#">
+                <img src="./build/img/Logo.svg" alt="Logo">
+            </a>
+        </div>
+
+        <p class="footer__copyrigth">© 2023 fitness.com | All Rights Reserved | Privacy policy</p>
+    </div>
+</footer>
+</body>
+
+    
+</html>

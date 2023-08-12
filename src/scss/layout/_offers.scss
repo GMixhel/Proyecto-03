@@ -1,0 +1,150 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+
+
+//--------------------------OFFERS
+.offers__title{
+    text-align: center;
+    text-transform: uppercase;
+    color: v.$principal;
+    font-weight: 600;
+    padding-top: 10rem;
+    
+}
+.offers__container{
+    text-align: center;
+    width: 100%;
+    @include m.grid (3, 4rem);
+    padding: 0 1rem;   
+    
+}
+ .offers__card {
+    background-color: v.$grey;
+    display: flex;
+    flex-direction: column;   
+    align-items: center;  
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;    
+     
+     h3{
+        background:v.$black;
+        color: #fff;
+        width: 100%;
+        padding: 3.5rem  5rem;
+        font-size: 3em;
+        font-weight: 600;
+        margin: 0;
+        border-radius: 0.5rem
+     }
+     .offers__promotion{
+        background: v.$principal;
+     }
+     .offers__ctn{
+        @include m.button;
+        text-transform: uppercase;
+        width: 10rem;
+        height: 5rem;
+        font-size: 1em;             
+        margin-top: -2rem;
+        
+        span{
+            z-index: 2;
+            pointer-events: none;
+                
+        }
+     }     
+        
+    .offers__plan{
+        margin: 2rem 0;
+         p {
+            color: v.$black;
+            padding: 1.5rem 0;
+            text-transform: uppercase;
+        }
+    }    
+
+ }
+ .offers__months{
+    color: v.$principal;
+    text-transform: uppercase;
+    font-size: 2rem;   
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -2rem;   
+    z-index: 1; 
+
+    h4{
+        padding: 2rem 0;
+    }
+ 
+ }
+    .pulse__animation {
+            position: relative;
+            display: flex;
+            color: #fff;
+            background-color: v.$principal;
+            width: 6rem;         
+            height: 6rem;  
+            border-radius: 50%; 
+            justify-content: center;
+            align-items: center;          
+         
+            span{
+                position: absolute;
+                display: block;                
+                width: 100%;
+                height: 100%;
+                background: inherit;
+                border-radius: inherit;
+                opacity: .5;
+                animation: pulse__animation 1s ease-in-out infinite;
+                z-index: -1;
+            }
+
+            @keyframes pulse__animation {
+                100%{
+                    opacity: 0;
+                    transform: scale(2);
+                }
+            }          
+            
+ }
+
+ //------------------------------------MEDIA QUERIES
+
+
+//---TABLET---//
+ @include m.tablet {
+      .offers__container{       
+        column-gap: 1.5rem;           
+              
+    }
+
+  .offers__card .offers__plan {
+       margin: 0;
+       p {       
+          font-size: 1em;
+       }
+   }
+ }
+
+//--MOVIL--//
+@include m.movil{
+    .offers__container{
+        @include m.grid(1, 0);
+        justify-items: center;       
+    }
+
+    .offers__card{
+        width: 80%;
+    }
+}
+
+
+
+
